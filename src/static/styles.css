@@ -30,15 +30,25 @@ header h1 {
 
 main {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 30px;
-  justify-content: center;
 }
 
 @media (min-width: 768px) {
   main {
-    grid-template-columns: 2fr 1fr;
+    flex-direction: row;
+    justify-content: space-between;
   }
+}
+
+#signup-container {
+  order: 1;
+  flex: 1;
+}
+
+#activities-container {
+  order: 2;
+  flex: 2;
 }
 
 section {
